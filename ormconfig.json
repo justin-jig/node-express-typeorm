@@ -1,0 +1,18 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "root",
+    "password": "root",
+    "database": "dev_database",
+    "synchronize": true,
+    "entities": [
+      "src/entity/*.js"
+    ],
+    "subscribers": [
+      "src/subscriber/*.js"
+    ],
+    "migrations": [
+      "src/migration/*.js"
+    ]
+  }

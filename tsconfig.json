@@ -1,0 +1,55 @@
+/** 참조 
+    https://typescript-kr.github.io/pages/compiler-options.html 
+*/
+{
+  "compilerOptions": {
+    "typeRoots" : ["./@types", "./node_modules/@types"],
+    "baseUrl": ".", // 기본 다이렉트
+    "lib": [ // 컴파일에 포함할 라이브러리
+      "ES6",
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "ScriptHost"
+    ],
+    // "outDir": "public/static", //  컴파일 후 생성되는 js파일이 생성될 폴더명
+    "allowJs": true, // 자바스크립트 허용
+    "noImplicitAny": true, // type any 오류 보고 활성화
+    "target": "es6", // JavaScript의 JavaScript 언어 버전을 설정하고 호환되는 라이브러리 선언
+    "jsx": "preserve", // 생성되는 jsx 코드 지정
+    "moduleResolution": "node", // typescript가 모듈 지정자에게 파일을 찾는 방법
+    "sourceMap": true, // sourceMap 파일 생성 ( 배포용 빌드한 파일과 원보 파일 연결 )
+    "allowSyntheticDefaultImports": true, // default export가 없는 모듈에서 default imports를 허용
+    "skipLibCheck": true, // 모듈 라이브러리 확인 건너뜀
+    "esModuleInterop": true, // import 호환
+    //"strict": true, //  검사 엄격 
+    //"forceConsistentCasingInFileNames": true, // 파일 대소문자 확인
+    "noFallthroughCasesInSwitch": true, // switch 문 오류 보고
+    "resolveJsonModule": true, // json 확장자 import된 모듈로 포함
+    "isolatedModules": true, // 추가로 트랜스파일된 모듈 타입 안전한지 확인
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "incremental": true,
+
+    // "paths": { // 위치에 모듈 이름의 경로 매핑 목록을 나열합니다
+    //   "@library/*": ["./library/*"],
+    //   "@controller/*": ["./src/controller/*"],
+    //   "@dataService/*": ["./src/dataService/*"],
+    //   "@style/*": ["./src/style/*"],
+    //   "@rankingCommonView/*": ["./src/project/rankingballweb/commonView/*"],
+    //   "@ranking.view/*": ["./src/project/rankingballweb/view/*"],
+    //   "@ranking.hooks/*": ["./src/project/rankingballweb/stores/hooks/*"],
+    //   "@ranking.stores/*": ["./src/project/rankingballweb/stores/*"],
+    // },
+  },
+  "exclude": [
+    "node_modules",
+  ] // 제외 목록
+  ,
+  "include": [
+    "*.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
